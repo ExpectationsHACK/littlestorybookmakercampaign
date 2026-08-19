@@ -647,17 +647,24 @@ section {
 }
 
 .url-text {
-  margin-top: 8px;
+  margin-top: 12px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 0.8rem;
   color: var(--ink-faint);
   word-break: break-all;
-  cursor: text;
+  cursor: pointer;
   user-select: all;
   padding: 4px 8px;
   background: rgba(60, 33, 89, 0.05);
   border-radius: 6px;
   display: inline-block;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.url-text:hover {
+  background: rgba(60, 33, 89, 0.1);
+  color: var(--purple);
+  text-decoration: underline;
 }
 
 .card-row {
