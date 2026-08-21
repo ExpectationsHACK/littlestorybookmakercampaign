@@ -976,3 +976,90 @@ footer .nav-brand {
   white-space: normal;
   overflow: visible;
 }
+
+/* --- mobile reading pass: bigger type, centered text, more breathing room --- */
+@media (max-width: 640px) {
+  body {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .eyebrow {
+    font-size: 0.85rem;
+  }
+
+  .hero-note {
+    font-size: 0.92rem;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+
+  .notebook-list p,
+  .card p,
+  .step-list p,
+  .plan-body,
+  .faq p {
+    font-size: 1rem;
+  }
+
+  .step-list h4,
+  .notebook-list h4 {
+    font-size: 1.12rem;
+  }
+
+  /* centred hero */
+  .hero .wrap > div {
+    text-align: center;
+  }
+  .hero h1,
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* stacked, centred icon rows read easier than a tight left column */
+  .notebook-list li,
+  .step-list li,
+  .point-list li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .step-list .step-num {
+    margin: 0 auto;
+  }
+  .notebook-list {
+    gap: 32px;
+  }
+  .step-list {
+    gap: 34px;
+  }
+  .point-list {
+    gap: 22px;
+  }
+
+  /* centred cards */
+  .card {
+    text-align: center;
+  }
+  .card .icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* centred pricing cards */
+  .plan {
+    text-align: center;
+  }
+  .plan-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
