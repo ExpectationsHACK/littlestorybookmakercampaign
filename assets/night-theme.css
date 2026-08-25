@@ -171,7 +171,7 @@ p{ margin:0; }
   .hero-media{ order:1; flex:0 0 50%; }
   .hero-media img{ height:50vh; }
   .hero-text{ order:2; flex:0 0 44%; text-align:left; }
-  .hero-text h1, .hero-text .hero-copy-p, .hero-text .hero-signature .brand-name, .hero-text .hero-italic-quote{ margin-inline:0; }
+  .hero-text h1, .hero-text .hero-copy-p, .hero-text .hero-signature .brand-name, .hero-text .hero-italic-quote, .hero-text .hero-sub, .hero-text .hero-line{ margin-inline:0; }
   .hero-text .hero-actions{ justify-content:flex-start; }
 }
 
