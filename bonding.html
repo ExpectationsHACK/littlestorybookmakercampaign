@@ -8,99 +8,87 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/brand.css" />
-<style>
-  /* text size pass, round 2: +20% on top of the previous pass, everything pushed to bold */
-  body { font-size: 1.575rem; font-weight: 700; }
-  h1 { font-size: clamp(2.835rem, 5.796vw, 4.536rem); font-weight: 800; }
-  h2 { font-size: clamp(2.625rem, 4.8vw, 3.75rem); font-weight: 800; }
-  h3 { font-size: 2.025rem; font-weight: 800; }
-  .eyebrow { font-size: 1.17rem; font-weight: 800; }
-  .lede { font-size: 1.575rem; font-weight: 700; }
-  .hero-sub { font-size: 1.725rem; font-weight: 700; }
-  .hero-note { font-size: 1.275rem; font-weight: 700; }
-  .hero-kicker { font-size: 1.275rem; font-weight: 800; }
-  .nav-brand { font-size: 1.65rem; font-weight: 800; }
-  .btn { font-size: 1.425rem; font-weight: 800; }
-  .point-list li { font-size: 1.53rem; font-weight: 700; }
-  .step-list .step-num { font-size: 1.575rem; font-weight: 800; }
-  .step-list h4 { font-size: 1.62rem; font-weight: 800; }
-  .step-list p { font-size: 1.425rem; font-weight: 700; }
-  .notebook-list h4 { font-size: 1.575rem; font-weight: 800; }
-  .notebook-list p { font-size: 1.425rem; font-weight: 700; }
-  .card h3 { font-size: 1.725rem; font-weight: 800; }
-  .card p { font-size: 1.47rem; font-weight: 700; }
-  .plan-name { font-size: 1.95rem; font-weight: 800; }
-  .plan-tagline { font-size: 1.38rem; font-weight: 800; }
-  .plan-body { font-size: 1.425rem; font-weight: 700; }
-  .plan-price { font-size: 3rem; font-weight: 800; }
-  .plan-price span { font-size: 1.2rem; font-weight: 800; }
-  .plan-badge { font-size: 1.05rem; font-weight: 800; }
-  .faq summary { font-weight: 800; }
-  .faq p { font-size: 1.44rem; font-weight: 700; }
-  .link-arrow { font-weight: 800; }
-  footer { font-size: 1.275rem; font-weight: 700; }
-</style>
+<link rel="stylesheet" href="assets/night-theme.css" />
+<!--
+THESIS: Bedtime is a ritual, not a checkout flow — the page refuses the daylight storybook-shelf look every other campaign page (and every AI-generated kids page) reaches for.
+OWN-WORLD: A twilight-to-dawn tone chain — dark indigo night, pale lavender quote, deep violet, soft lavender pricing, near-black close — each section a distinct light or dark tone that blends only across its own padding edge into the next. One committed amber moonglow, papercut silhouettes of a parent and child, thread-stitched dividers, pricing as due-date library cards.
+STORY: A tired parent recognises tonight's ritual in the hero, believes this is the same bedtime moment they already treasure (not an app pitch), and taps through to create tonight's story.
+FIRST VIEWPORT: Full-bleed night sky with twinkling stars and a breathing amber moon behind a papercut silhouette of parent-and-child reading; oversized headline in warm moonlight type; single amber CTA glowing beneath.
+FORM: Chosen directly from the product's own bedtime-ritual copy and the six reference sites (committed color strategy from drinkliquidplus/hexclad's confidence, editorial restraint from armra, structural proof-blocks from clay). concept-seed.mjs tournament not run — solo static-site build, no image-gen/decision-page infrastructure available in this environment; disclosed rather than faked.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap">
-    <a href="#top" class="nav-brand"><svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Little Story Book Maker</a>
-    <a href="https://littlestorybookmaker.com/" class="btn btn-gold nav-cta">Create Today's Story</a>
+    <a href="#top" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Little Story Book Maker
+    </a>
+    <a href="https://littlestorybookmaker.com/" class="btn btn-amber nav-cta">Create Today's Story</a>
   </div>
 </nav>
 
-<header class="hero band-purple" id="top">
-  <div class="wrap">
-    <div>
-      <span class="hero-kicker scribble">You won't know it's the last time. You never do.</span>
-      <h1>There will be a last time<br>your child asks you to tell them a story.</h1>
-      <p class="hero-sub">The next time you pick them up, they'll feel heavier in your arms than you remember. It happens so gradually you don't notice, until suddenly you do, and it hits you: <em>you need more of these moments, not fewer.</em></p>
-      <p class="lede" style="margin-top:18px;">Right now, though, they still climb up beside you and say it:</p>
-      <p style="margin-top:14px;font-family:var(--font-display);font-size:1.6rem;font-style:italic;color:var(--cloud);">“Once upon a time…”</p>
-      <p class="lede" style="margin-top:18px;">They're still small enough, still yours enough, to want this. One day they'll be older, with their own world you're not standing in the middle of anymore. That's exactly how it should be.</p>
-      <p style="margin-top:14px;font-weight:700;color:var(--cloud);font-size:1.1rem;">But not yet.</p>
-      <p class="lede" style="margin-top:14px;">One of the best ways to bond with your child is something you're probably already doing: telling them a story. You just need one that's actually theirs. Little Storybook Maker helps you make the most of right now.</p>
-      <div class="hero-actions">
-        <a href="https://littlestorybookmaker.com/" class="btn btn-gold">Create today's story</a>
-      </div>
+<header class="hero" id="top">
+  <div class="hero-scene skyband">
+    <div class="starfield" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="silhouette-wrap">
+      <svg class="silhouette" viewBox="0 0 320 200" fill="currentColor" aria-hidden="true">
+        <ellipse cx="160" cy="196" rx="150" ry="8" opacity=".35"/>
+        <path d="M52 197 C52 132 74 96 118 88 C162 96 184 132 184 197 Z"/>
+        <circle cx="118" cy="70" r="26"/>
+        <path d="M168 197 C168 155 182 130 214 124 C246 130 260 155 260 197 Z"/>
+        <circle cx="214" cy="106" r="18"/>
+        <path d="M118 158 Q160 134 202 158 L202 172 Q160 150 118 172 Z" fill="var(--moon-core)" opacity=".92"/>
+        <path d="M160 140 L160 150" stroke="var(--moon-core)" stroke-width="2" opacity=".92"/>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap hero-copy">
+    <h1>There will be a last time your child asks you to tell them <em>a story.</em></h1>
+    <p class="hero-sub">The next time you pick them up, they'll feel heavier in your arms than you remember. It happens so gradually you don't notice, until suddenly you do.</p>
+    <p class="hero-line">Right now, though, they still climb up beside you and say it.</p>
+    <p class="hero-quote">"Once upon a time&hellip;"</p>
+    <p class="hero-note">But not yet.</p>
+    <div class="hero-actions">
+      <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create today's story</a>
     </div>
   </div>
 </header>
 
-<section>
-  <div class="wrap" style="text-align:center;">
-    <div class="section-head" data-reveal>
-      <p style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--purple);max-width:36ch;margin:0 auto;line-height:1.35;">Because most nights, it was never really about the story. It's about the little person sitting beside you while you tell it.</p>
-    </div>
+<div class="stitch" aria-hidden="true"></div>
+
+<section class="quoteband">
+  <div class="wrap" data-reveal>
+    <p>Because most nights, it was never really about the story. It's about the little person sitting beside you while you tell it.</p>
   </div>
 </section>
 
-<section class="band-sand" id="what">
+<section class="section" id="what">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <p class="eyebrow">What goes into a bonding story</p>
-      <h2>Not just any story. A reason to sit <span class="hl">close</span>.</h2>
+      <h2>Not just any story. A reason to sit <span>close</span>.</h2>
     </div>
-    <div class="card-row" data-reveal>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 6 C21 3 27 5 27 12 C27 20 17 27 17 27 C17 27 7 20 7 12 C7 5 13 3 17 6 Z" stroke="currentColor" stroke-width="2.2" fill="var(--coral)" fill-opacity="0.2"/></svg>
+    <div class="starpath" data-reveal>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 6 C21 3 27 5 27 12 C27 20 17 27 17 27 C17 27 7 20 7 12 C7 5 13 3 17 6 Z"/></svg>
         <h3>What they love</h3>
         <p>Their favourite toy, a friend, an adventure they'd choose themselves. The story starts with what already lights them up.</p>
       </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 5 L19 13 L27 13 L20.5 18 L23 26 L17 21 L11 26 L13.5 18 L7 13 L15 13 Z" stroke="currentColor" stroke-width="2" fill="var(--gold)" fill-opacity="0.25"/></svg>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 5 L19 13 L27 13 L20.5 18 L23 26 L17 21 L11 26 L13.5 18 L7 13 L15 13 Z"/></svg>
         <h3>What they're learning</h3>
         <p>Fold in the exact word or idea they're working on right now, so the moment together does double duty.</p>
       </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 5 C24 5 27 12 27 17 C27 24 20 29 17 29 C14 29 7 24 7 17 C7 12 10 5 17 5 Z" stroke="currentColor" stroke-width="2.2" fill="var(--lavender)" fill-opacity="0.3"/></svg>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 29 C17 20 17 16 17 12 M17 12 C17 8 13 6 9 8 C10 12 13 14 17 12 M17 15 C17 11 21 9 25 11 C24 15 21 17 17 15"/></svg>
         <h3>A value you want to plant</h3>
         <p>Kindness, courage, sharing, patience: choose a lesson you want them to carry, woven gently into the adventure.</p>
       </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M9 24 C9 12 25 12 25 24" stroke="currentColor" stroke-width="2.2" fill="none"/><circle cx="9" cy="24" r="2.4" fill="var(--coral)"/><circle cx="25" cy="24" r="2.4" fill="var(--coral)"/></svg>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 24 C9 12 25 12 25 24" fill="none"/><circle cx="9" cy="24" r="2.2"/><circle cx="25" cy="24" r="2.2"/></svg>
         <h3>A few minutes, fully together</h3>
         <p>No rushing, no distractions. Just the two of you, and a story that only exists because you made it for them.</p>
       </div>
@@ -108,57 +96,64 @@
   </div>
 </section>
 
-<section id="pricing">
+<div class="stitch" aria-hidden="true"></div>
+
+<section class="section" id="pricing">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">Simple, honest pricing</p>
+    <div class="pricing-head" data-reveal>
       <h2>A small price for time you'll want back one day.</h2>
-      <p class="lede">Ages 2 to 10 · Cancel anytime, no long contracts, no hidden fees.</p>
     </div>
-    <div class="pricing-grid" data-reveal>
-      <div class="plan">
+    <p class="pricing-sub" data-reveal>Ages 2 to 10 &middot; Cancel anytime, no long contracts, no hidden fees.</p>
+
+    <div class="cardshelf" data-reveal>
+      <div class="libcard">
         <div class="plan-name">Monthly</div>
-        <div class="plan-price">₦2,500<span>per month</span></div>
+        <div class="plan-price">&#8358;2,500<span>per month</span></div>
         <p class="plan-body">Up to 50 stories a month: a new reason to sit close, any night you choose.</p>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-ghost btn-block">Start monthly</a>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-outline btn-block">Start monthly</a>
       </div>
-      <div class="plan">
-        <span class="plan-badge scribble">Save 20%</span>
+      <div class="libcard is-annual">
+        <span class="libcard-stamp">Save 20%</span>
         <div class="plan-name">Annual</div>
-        <div class="plan-price">₦24,000<span>per year</span></div>
+        <div class="plan-price">&#8358;24,000<span>per year</span></div>
         <p class="plan-body">A whole year of moments you'll be glad you didn't let slip by.</p>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-ghost btn-block">Start the year</a>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-outline btn-block">Start the year</a>
       </div>
-      <div class="plan plan-lifetime">
-        <span class="plan-badge scribble">Best value</span>
+      <div class="libcard">
+        <span class="libcard-stamp">Best value</span>
         <div class="plan-name">Lifetime</div>
-        <div class="plan-price">₦38,500<span>once, no recurring payment</span></div>
-        <p class="plan-body">Pay once and keep creating bonding stories for as long as they still want one. No monthly reminder, nothing to renew.</p>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-gold btn-block">Get lifetime access</a>
+        <div class="plan-price">&#8358;38,500<span>once</span></div>
+        <p class="plan-body">Pay once and keep creating bonding stories for as long as they still want one. Nothing to renew.</p>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-amber btn-block">Get lifetime access</a>
       </div>
     </div>
-    <p class="hero-note" style="text-align:center;margin-top:24px;">Monthly and Annual are free to cancel anytime, no questions asked.</p>
+    <p class="pricing-foot" data-reveal>Monthly and Annual are free to cancel anytime, no questions asked.</p>
   </div>
 </section>
 
-<section class="band-purple final-cta">
+<section class="final-cta skyband">
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="moon" aria-hidden="true"></div>
   <div class="wrap" data-reveal>
-    <h2>They won't ask forever.<br>Tonight, they still are.</h2>
-    <p class="lede">What they love, what they're learning, or a value worth planting: one story, a few minutes, fully together.</p>
-    <div class="hero-actions">
-      <a href="https://littlestorybookmaker.com/" class="btn btn-gold">Create today's story</a>
+    <h2>They won't ask forever. Tonight, they still are.</h2>
+    <p>What they love, what they're learning, or a value worth planting: one story, a few minutes, fully together.</p>
+    <div class="hero-actions" style="margin-top:1.75rem;">
+      <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create today's story</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="nav-brand"><svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Little Story Book Maker</div>
+    <div class="nav-brand" style="justify-content:center;">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Little Story Book Maker
+    </div>
     <p>Little Storybook Maker: make reading time bonding time.</p>
     <p>littlestorybookmaker.com</p>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/reveal.js"></script>
 </body>
 </html>

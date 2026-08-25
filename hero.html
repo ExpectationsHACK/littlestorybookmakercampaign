@@ -8,175 +8,150 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/brand.css" />
-<style>
-  /* text size pass, round 2: +20% on top of the previous pass, everything pushed to bold */
-  body { font-size: 1.575rem; font-weight: 700; }
-  h1 { font-size: clamp(2.835rem, 5.796vw, 4.536rem); font-weight: 800; }
-  h2 { font-size: clamp(2.625rem, 4.8vw, 3.75rem); font-weight: 800; }
-  h3 { font-size: 2.025rem; font-weight: 800; }
-  .eyebrow { font-size: 1.17rem; font-weight: 800; }
-  .lede { font-size: 1.575rem; font-weight: 700; }
-  .hero-sub { font-size: 1.725rem; font-weight: 700; }
-  .hero-note { font-size: 1.275rem; font-weight: 700; }
-  .hero-kicker { font-size: 1.275rem; font-weight: 800; }
-  .nav-brand { font-size: 1.65rem; font-weight: 800; }
-  .btn { font-size: 1.425rem; font-weight: 800; }
-  .point-list li { font-size: 1.53rem; font-weight: 700; }
-  .step-list .step-num { font-size: 1.575rem; font-weight: 800; }
-  .step-list h4 { font-size: 1.62rem; font-weight: 800; }
-  .step-list p { font-size: 1.425rem; font-weight: 700; }
-  .notebook-list h4 { font-size: 1.575rem; font-weight: 800; }
-  .notebook-list p { font-size: 1.425rem; font-weight: 700; }
-  .card h3 { font-size: 1.725rem; font-weight: 800; }
-  .card p { font-size: 1.47rem; font-weight: 700; }
-  .plan-name { font-size: 1.95rem; font-weight: 800; }
-  .plan-tagline { font-size: 1.38rem; font-weight: 800; }
-  .plan-body { font-size: 1.425rem; font-weight: 700; }
-  .plan-price { font-size: 3rem; font-weight: 800; }
-  .plan-price span { font-size: 1.2rem; font-weight: 800; }
-  .plan-badge { font-size: 1.05rem; font-weight: 800; }
-  .faq summary { font-weight: 800; }
-  .faq p { font-size: 1.44rem; font-weight: 700; }
-  .link-arrow { font-weight: 800; }
-  footer { font-size: 1.275rem; font-weight: 700; }
-</style>
+<link rel="stylesheet" href="assets/night-theme.css" />
+<!--
+THESIS: Courage is rehearsed, not told — the page keeps the intimate bedtime frame instead of turning into a superhero-poster pastiche.
+OWN-WORLD: Same twilight tone-chain as bonding.html.
+STORY: A mum who wants her child to feel brave believes a story can let them practice being the brave one, safely, tonight.
+FIRST VIEWPORT: Night sky, breathing moon, papercut parent-and-child-with-book silhouette, headline "make your child the hero of their own story."
+FORM: Shared night-theme.css system carried over from the approved bonding.html redesign.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap">
-    <a href="#top" class="nav-brand"><svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Little Story Book Maker</a>
-    <a href="https://littlestorybookmaker.com/" class="btn btn-gold nav-cta">Create Their Story</a>
+    <a href="#top" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Little Story Book Maker
+    </a>
+    <a href="https://littlestorybookmaker.com/" class="btn btn-amber nav-cta">Create Their Story</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <span class="hero-kicker scribble">For the mum who wants her child to feel brave</span>
-      <h1>Make your child the <span class="hl">hero</span><br>of their own story.</h1>
-      <p class="hero-sub">Not a side character. Not just a reader. The one the story is actually about: brave, capable, and exactly who they are, doing the thing they didn't think they could do.</p>
-      <div class="hero-actions">
-        <a href="https://littlestorybookmaker.com/" class="btn btn-gold">Create Their Story</a>
-        <a href="#why" class="link-arrow">See how it works →</a>
-      </div>
-      <p class="hero-note" style="margin-top:14px;">No app to download to see the idea. Try it below.</p>
+  <div class="hero-scene skyband">
+    <div class="starfield" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="silhouette-wrap">
+      <svg class="silhouette" viewBox="0 0 320 200" fill="currentColor" aria-hidden="true">
+        <ellipse cx="160" cy="196" rx="150" ry="8" opacity=".35"/>
+        <path d="M52 197 C52 132 74 96 118 88 C162 96 184 132 184 197 Z"/>
+        <circle cx="118" cy="70" r="26"/>
+        <path d="M168 197 C168 155 182 130 214 124 C246 130 260 155 260 197 Z"/>
+        <circle cx="214" cy="106" r="18"/>
+        <path d="M118 158 Q160 134 202 158 L202 172 Q160 150 118 172 Z" fill="var(--moon-core)" opacity=".92"/>
+        <path d="M160 140 L160 150" stroke="var(--moon-core)" stroke-width="2" opacity=".92"/>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap hero-copy">
+    <h1>Make your child the <em>hero</em> of their own story.</h1>
+    <p class="hero-sub">Not a side character. Not just a reader. The one the story is actually about: brave, capable, and exactly who they are, doing the thing they didn't think they could do.</p>
+    <p class="hero-note">No app to download to see the idea. Try it below.</p>
+    <div class="hero-actions">
+      <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create their story</a>
     </div>
   </div>
 </header>
 
-<section class="band-sand" id="why">
+<section class="howband" id="why">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <p class="eyebrow">Every child wants to be the hero</p>
-      <h2>They don't want to hear about a brave kid. They want to <span class="hl">be</span> one.</h2>
+      <h2>They don't want to hear about a brave kid. They want to be one.</h2>
       <p class="lede">Most books hand your child a hero to admire from the outside. Little Story Book Maker hands them the story where they are the hero, the one who's scared and does the brave thing anyway, in a moment made just for them.</p>
     </div>
-    <ol class="step-list" data-reveal>
-      <li>
-        <span class="step-num">1</span>
-        <div><h4>Tell it what kind of hero they are today.</h4><p>Brave on the first day of school, kind to a friend, facing the dark, anything.</p></div>
-      </li>
-      <li>
-        <span class="step-num">2</span>
-        <div><h4>Then create.</h4><p>Little Story Book Maker writes them straight into the middle of it.</p></div>
-      </li>
-      <li>
-        <span class="step-num">3</span>
-        <div><h4>Watch them become the hero, tonight.</h4><p>Read it together, and let them see themselves do the brave thing first.</p></div>
-      </li>
+    <ol class="steps-simple" data-reveal>
+      <li><span class="step-num">1</span><h4>Tell it what kind of hero they are today.</h4><p>Brave on the first day of school, kind to a friend, facing the dark, anything.</p></li>
+      <li><span class="step-num">2</span><h4>Then create.</h4><p>Little Story Book Maker writes them straight into the middle of it.</p></li>
+      <li><span class="step-num">3</span><h4>Watch them become the hero, tonight.</h4><p>Read it together, and let them see themselves do the brave thing first.</p></li>
     </ol>
   </div>
 </section>
 
-<section>
+<section class="section" id="what">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <p class="eyebrow">What being the hero does for them</p>
-      <h2>More than a fun story. A <span class="hl hl-lavender">rehearsal</span> for real life.</h2>
+      <h2>More than a fun story. A <span>rehearsal</span> for real life.</h2>
     </div>
-    <ul class="notebook-list two-col" data-reveal>
-      <li>
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 5 L19 13 L27 13 L20.5 18 L23 26 L17 21 L11 26 L13.5 18 L7 13 L15 13 Z" stroke="currentColor" stroke-width="2" fill="var(--gold)" fill-opacity="0.25"/></svg>
-        <div><h4>Builds real confidence</h4><p>Because they did the brave thing, not a character who looks a bit like them.</p></div>
-      </li>
-      <li>
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M9 20 C9 12 25 12 25 20 L25 24 L9 24 Z" stroke="currentColor" stroke-width="2.2" fill="var(--coral)" fill-opacity="0.2"/><line x1="17" y1="7" x2="17" y2="12" stroke="currentColor" stroke-width="2"/></svg>
-        <div><h4>Makes hard days easier</h4><p>A new sibling, a big fear, the first day somewhere new: the hero already faced it.</p></div>
-      </li>
-      <li>
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><path d="M17 6 C21 3 27 5 27 12 C27 20 17 27 17 27 C17 27 7 20 7 12 C7 5 13 3 17 6 Z" stroke="currentColor" stroke-width="2.2" fill="var(--coral)" fill-opacity="0.2"/></svg>
-        <div><h4>Teaches through action</h4><p>Not a lecture about being brave. A story where they already were.</p></div>
-      </li>
-      <li>
-        <svg class="icon" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="11" stroke="currentColor" stroke-width="2.2" fill="var(--sand-deep)"/></svg>
-        <div><h4>Only they could be this hero</h4><p>The story exists because you made it, and it exists for them alone.</p></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="band-sand">
-  <div class="wrap" style="text-align:center;">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">They already have what it takes</p>
-      <h2>Every child is already <span class="hl">brave</span> enough. They just need to see it first.</h2>
-      <p class="lede">Sometimes the fastest way to help a child face something hard is to let them watch themselves face it, in a story built for exactly that moment.</p>
+    <div class="starpath" data-reveal>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 5 L19 13 L27 13 L20.5 18 L23 26 L17 21 L11 26 L13.5 18 L7 13 L15 13 Z"/></svg>
+        <h3>Builds real confidence</h3>
+        <p>Because they did the brave thing, not a character who looks a bit like them.</p>
+      </div>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 20 C9 12 25 12 25 20 L25 24 L9 24 Z"/><line x1="17" y1="7" x2="17" y2="12"/></svg>
+        <h3>Makes hard days easier</h3>
+        <p>A new sibling, a big fear, the first day somewhere new: the hero already faced it.</p>
+      </div>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 6 C21 3 27 5 27 12 C27 20 17 27 17 27 C17 27 7 20 7 12 C7 5 13 3 17 6 Z"/></svg>
+        <h3>Teaches through action</h3>
+        <p>Not a lecture about being brave. A story where they already were.</p>
+      </div>
+      <div class="starpath-item">
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="17" cy="17" r="11"/></svg>
+        <h3>Only they could be this hero</h3>
+        <p>The story exists because you made it, and it exists for them alone.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="pricing">
+<section class="reinforce">
+  <div class="wrap" data-reveal>
+    <p>Every child is already brave enough. They just need to see it first.</p>
+    <p class="lede" style="color:var(--ink-muted);margin-top:1.1rem;">Sometimes the fastest way to help a child face something hard is to let them watch themselves face it, in a story built for exactly that moment.</p>
+  </div>
+</section>
+
+<section class="section" id="pricing">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">Choose your plan</p>
-      <h2>One way in. Three ways to <span class="hl">pay</span> for it.</h2>
+    <div class="pricing-head" data-reveal>
+      <h2>One way in. Three ways to pay for it.</h2>
     </div>
-    <div class="pricing-grid" data-reveal>
-      <div class="plan">
+    <div class="cardshelf" data-reveal>
+      <div class="libcard">
         <div class="plan-name">Monthly</div>
-        <div class="plan-tagline">Flexible storytelling for everyday life.</div>
+        <div class="plan-price">&#8358;2,500<span>per month</span></div>
         <p class="plan-body">Create personalised stories whenever you need them and make reading part of your routine.</p>
-        <div class="plan-price">₦2,500<span>/ month</span></div>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-ghost btn-block">Get started</a>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-outline-ink btn-block">Get started</a>
       </div>
-      <div class="plan">
-        <span class="plan-badge scribble">Most popular</span>
+      <div class="libcard is-annual">
+        <span class="libcard-stamp">Most popular</span>
         <div class="plan-name">Annual</div>
-        <div class="plan-tagline">More value for families who want storytelling to become a habit.</div>
+        <div class="plan-price">&#8358;24,000<span>per year</span></div>
         <p class="plan-body">Keep creating personalised stories throughout the year as your child's interests and learning needs change.</p>
-        <div class="plan-price">₦24,000<span>/ year</span></div>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-ghost btn-block">Get annual access</a>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-outline-ink btn-block">Get annual access</a>
       </div>
-      <div class="plan plan-lifetime">
-        <span class="plan-badge scribble">Best value</span>
+      <div class="libcard">
+        <span class="libcard-stamp">Best value</span>
         <div class="plan-name">Lifetime</div>
-        <div class="plan-tagline">Pay once. Keep creating.</div>
-        <p class="plan-body">One payment gives you lifetime access to Little Story Book Maker, so you can keep making them the hero as they grow.</p>
-        <div class="plan-price">₦38,500<span>once, no recurring payment</span></div>
-        <a href="https://littlestorybookmaker.com/" class="btn btn-gold btn-block">Get lifetime access</a>
+        <div class="plan-price">&#8358;38,500<span>once</span></div>
+        <p class="plan-body">One payment gives you lifetime access, so you can keep making them the hero as they grow.</p>
+        <a href="https://littlestorybookmaker.com/" class="btn btn-amber btn-block">Get lifetime access</a>
       </div>
     </div>
+    <p class="pricing-foot" data-reveal>Monthly and Annual are free to cancel anytime, no questions asked.</p>
   </div>
 </section>
 
-<section class="band-purple">
-  <div class="wrap" style="text-align:center;">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow" style="color:var(--gold-soft);">Why lifetime, why now</p>
-      <h2>Today, brave enough for the dark. Next year, brave enough for <span class="hl">something bigger</span>.</h2>
-      <p class="lede">₦38,500 costs less than sixteen months of the Monthly plan. As what scares them changes, the story can change with it, and you can keep making them the hero of it.</p>
-    </div>
-    <a href="https://littlestorybookmaker.com/" class="btn btn-gold" data-reveal>Get lifetime access</a>
-  </div>
-</section>
-
-<section>
+<section class="whyband">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <p class="eyebrow">Questions, answered</p>
-      <h2>Before you <span class="hl hl-lavender">create</span> their story</h2>
+      <h2>Today, brave enough for the dark. Next year, brave enough for <span>something bigger</span>.</h2>
+      <p class="lede">&#8358;38,500 costs less than sixteen months of the Monthly plan. As what scares them changes, the story can change with it, and you can keep making them the hero of it.</p>
+    </div>
+    <a href="https://littlestorybookmaker.com/" class="btn btn-amber" data-reveal>Get lifetime access</a>
+  </div>
+</section>
+
+<section class="section faq-section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Before you <span>create</span> their story</h2>
     </div>
     <div class="faq" data-reveal>
       <details open>
@@ -203,25 +178,29 @@
   </div>
 </section>
 
-<section class="band-purple final-cta">
+<section class="final-cta skyband">
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="moon" aria-hidden="true"></div>
   <div class="wrap" data-reveal>
-    <p class="eyebrow" style="color:var(--gold-soft);">They don't need a hero</p>
-    <h2>They need to know<br>they already <span class="hl">are</span> one.</h2>
-    <p class="lede">Give them a story where they're not watching someone else be brave. Give them one where they are, and let them read it as many times as they need to believe it.</p>
-    <div class="hero-actions">
-      <a href="https://littlestorybookmaker.com/" class="btn btn-gold">Create Their Story</a>
+    <h2>They need to know they already <span style="color:var(--moon-glow);">are</span> one.</h2>
+    <p>Give them a story where they're not watching someone else be brave. Give them one where they are, and let them read it as many times as they need to believe it.</p>
+    <div class="hero-actions" style="margin-top:1.75rem;">
+      <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create Their Story</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="nav-brand"><svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Little Story Book Maker</div>
+    <div class="nav-brand" style="justify-content:center;">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4 7c3-2 6-2 9 0v14c-3-2-6-2-9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M24 7c-3-2-6-2-9 0v14c3-2 6-2 9 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Little Story Book Maker
+    </div>
     <p>Personalised stories. Meaningful lessons. Little moments that matter.</p>
-    <p>© 2026 Little Story Book Maker. Made for bedtime.</p>
+    <p>&copy; 2026 Little Story Book Maker. Made for bedtime.</p>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/reveal.js"></script>
 </body>
 </html>
