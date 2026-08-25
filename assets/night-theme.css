@@ -175,6 +175,12 @@ p{ margin:0; }
   .hero-text .hero-actions{ justify-content:flex-start; }
 }
 
+/* ---------- hero intro (light, sits right after the split hero) ---------- */
+.hero-intro{ padding-block:3rem; text-align:center; background:var(--tone-quote); }
+.hero-intro p{ font-size:1.05rem; font-weight:800; line-height:1.65; max-width:52ch; margin:0 auto; color:var(--ink-muted); }
+.hero-intro .hero-note{ margin-top:.75rem; font-weight:800; color:#8a4f0f; }
+.hero-intro .hero-actions{ margin-top:1.75rem; justify-content:center; }
+
 /* ---------- stitched divider ---------- */
 .stitch{ position:relative; height:1px; background-image:linear-gradient(to right, transparent 0, rgba(240,166,58,.5) 6px, transparent 6px); background-size:16px 1px; background-repeat:repeat-x; opacity:.6; }
 
