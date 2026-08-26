@@ -9,6 +9,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/night-theme.css" />
+<style>
+  /* Page-scoped only: same warm claymorphic/storybook treatment as
+     bonding-verbatim.html, applied to this page's plain-text sections.
+     Does not touch night-theme.css, so no other campaign page is affected. */
+  :root{
+    --clay-peach-1:#fef0e0; --clay-peach-2:#fddbb8;
+    --clay-lavender-1:#f0e6fb; --clay-lavender-2:#e2cff5;
+    --clay-mint-1:#e2f7ec; --clay-mint-2:#c9edd9;
+    --clay-blush-1:#ffeef2; --clay-blush-2:#ffd9e4;
+    --clay-ink:#4a3540; --clay-ink-soft:#6e5560;
+    --clay-card:#fffaf2; --clay-accent:#a04a1a; --clay-accent-2:#6e46a0;
+  }
+
+  .narrative-1{ background:linear-gradient(160deg, var(--clay-peach-1) 0%, var(--clay-peach-2) 60%, var(--clay-lavender-1) 100%); }
+  .narrative-2{ background:linear-gradient(160deg, var(--clay-lavender-1) 0%, var(--clay-lavender-2) 60%, var(--clay-mint-1) 100%); }
+  .narrative-3{ background:linear-gradient(160deg, var(--clay-mint-1) 0%, var(--clay-mint-2) 60%, var(--clay-blush-1) 100%); }
+  .quoteband{ background:linear-gradient(160deg, var(--clay-blush-1) 0%, var(--clay-blush-2) 55%, var(--tone-mid) 100%); }
+
+  .narrative p, .quoteband p{ color:var(--clay-ink-soft); }
+  .narrative .quote-line, .quoteband p{ color:var(--clay-ink); }
+  .narrative-1 .narrative-signature .brand-name, .narrative-2 .narrative-signature .brand-name, .narrative-3 .narrative-signature .brand-name{ color:var(--clay-accent); }
+  .narrative-signature p:not(.brand-name){ color:var(--clay-ink-soft); }
+  .narrative .accent{
+    color:var(--clay-accent); font-weight:800;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8' viewBox='0 0 20 8'%3E%3Cpath d='M0 4 Q5 0 10 4 T20 4' fill='none' stroke='%23a04a1a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-position:0 100%; background-size:18px 8px; padding-bottom:.3rem;
+  }
+
+  /* claymorphic / soft-neumorphic cards around plain-text blocks */
+  .clay-card{
+    position:relative; background:var(--clay-card); border-radius:2rem;
+    padding:2.75rem 2.25rem; max-width:44rem; margin:0 auto;
+    box-shadow:10px 10px 24px rgba(150,100,70,.18), -8px -8px 20px rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .clay-doodle{ position:absolute; top:-1rem; right:-.75rem; width:3rem; height:3rem; opacity:.9; }
+  .narrative-3 .btn-amber{
+    box-shadow:6px 6px 14px rgba(150,100,70,.3), -4px -4px 10px rgba(255,255,255,.7), 0 0 0 1px rgba(255,232,184,.3) inset;
+  }
+
+  .wavy-divider{ display:block; width:100%; height:1.75rem; margin:0; }
+  .wavy-divider path{ fill:none; stroke:var(--clay-accent-2); stroke-width:3; stroke-linecap:round; opacity:.55; }
+
+  @media (max-width:36rem){ .clay-card{ padding:2rem 1.35rem; } }
+</style>
 <!--
 THESIS: This is the 15-minutes-before-bed version of the bedtime ritual — same night-sky world as bonding-verbatim, verbatim copy from a different, faster angle.
 OWN-WORLD: Identical twilight tone-chain, hero-split, and narrative/starpath/library-card system as bonding-verbatim.html, reusing the same hero image.
@@ -45,19 +89,29 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <section class="narrative narrative-1">
   <div class="wrap" data-reveal>
-    <p>You've got maybe 15 minutes before you need to shower, eat something standing up, and get to bed, because tomorrow starts all over again.</p>
-    <p>Every part of you wants to say <span class="accent">&ldquo;not tonight, baby.&rdquo;</span></p>
-    <p>But you don't. Because you know this: five minutes, ten minutes, whatever you've got left, might be the only real moment you two get today.</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 L23 16 L33 17 L25 24 L27 34 L20 28 L13 34 L15 24 L7 17 L17 16 Z"/></svg>
+      <p>You've got maybe 15 minutes before you need to shower, eat something standing up, and get to bed, because tomorrow starts all over again.</p>
+      <p>Every part of you wants to say <span class="accent">&ldquo;not tonight, baby.&rdquo;</span></p>
+      <p>But you don't. Because you know this: five minutes, ten minutes, whatever you've got left, might be the only real moment you two get today.</p>
+    </div>
   </div>
 </section>
 
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
+
 <section class="narrative narrative-2">
   <div class="wrap" data-reveal>
-    <p class="quote-line">&ldquo;Which book&hellip;&rdquo; you mutter, scanning the shelf.</p>
-    <p>Not that one, it's twenty pages and you'll have to stop every other line to explain a word. Not tonight. You don't have it in you.</p>
-    <p class="accent">You need something else. Something quick. Something that's actually yours.</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent-2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 32 C10 24 5 18 5 12 C5 7 9 4 13 4 C16 4 19 6 20 9 C21 6 24 4 27 4 C31 4 35 7 35 12 C35 18 30 24 20 32 Z"/></svg>
+      <p class="quote-line">&ldquo;Which book&hellip;&rdquo; you mutter, scanning the shelf.</p>
+      <p>Not that one, it's twenty pages and you'll have to stop every other line to explain a word. Not tonight. You don't have it in you.</p>
+      <p class="accent">You need something else. Something quick. Something that's actually yours.</p>
+    </div>
   </div>
 </section>
+
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
 
 <section class="narrative narrative-3">
   <div class="wrap" data-reveal>
@@ -97,9 +151,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 </section>
 
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
+
 <section class="quoteband">
   <div class="wrap" data-reveal>
-    <p>Not because you don't care. Because you care enough to make the little time you have count.</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent-2)" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M25 6 C15 8 9 16 11 25 C13 33 22 38 30 35 C21 34 14 27 14 18 C14 11 19 6 25 6 Z"/></svg>
+      <p>Not because you don't care. Because you care enough to make the little time you have count.</p>
+    </div>
   </div>
 </section>
 
