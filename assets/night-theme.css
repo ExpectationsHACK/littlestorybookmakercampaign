@@ -353,8 +353,15 @@ p{ margin:0; }
   padding:.3rem .6rem; border-radius:.35rem;
 }
 .plan-name{ font-family:var(--font-display); font-weight:800; font-size:1.872rem; margin-top:1rem; }
-.plan-price{ font-family:var(--font-display); font-weight:800; font-size:3.024rem; margin-top:.5rem; }
-.plan-price span{ font-family:var(--font-body); font-weight:800; font-size:1.224rem; opacity:.7; margin-left:.25rem; }
+.plan-price{ font-family:var(--font-display); font-weight:800; font-size:clamp(2.1rem, 8vw, 3.024rem); margin-top:.5rem; white-space:nowrap; }
+.plan-price span{ font-family:var(--font-body); font-weight:800; font-size:clamp(.95rem, 3vw, 1.224rem); opacity:.7; margin-left:.25rem; }
+@media (min-width:56rem){
+  .plan-price{ font-size:clamp(2.1rem, 3.6vw, 3.024rem); }
+  .plan-price span{ font-size:clamp(.95rem, 1.4vw, 1.224rem); }
+}
+@media (max-width:26rem){
+  .libcard{ padding-left:1.1rem; padding-right:1.1rem; }
+}
 .plan-body{ font-weight:700; font-size:1.368rem; margin-top:.85rem; line-height:1.55; opacity:.85; }
 .libcard .btn{ margin-top:1.35rem; }
 .libcard .btn-amber{ background:var(--paper-ink); color:var(--paper); box-shadow:none; }
