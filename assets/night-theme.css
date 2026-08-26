@@ -217,6 +217,29 @@ p{ margin:0; }
 .steps-simple h4{ color:var(--ink-deep); font-size:1.584rem; font-weight:800; margin-bottom:.4rem; }
 .steps-simple p{ color:var(--ink-muted); font-size:1.368rem; font-weight:700; line-height:1.5; }
 
+/* ---------- icon cards (colorful, varied per card) ---------- */
+.icon-cards{ display:grid; gap:1.5rem; grid-template-columns:1fr; max-width:52rem; margin:2.25rem auto 0; text-align:left; }
+@media (min-width:40rem){ .icon-cards{ grid-template-columns:repeat(2,1fr); max-width:56rem; } }
+.icon-card{
+  border-radius:1.2rem; padding:1.9rem 1.7rem;
+  box-shadow:0 1.1rem 2.1rem -0.65rem rgba(33,26,63,.35);
+}
+.icon-card .icon-badge{
+  width:4.2rem; height:4.2rem; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:1.1rem;
+}
+.icon-card .icon-badge svg{ width:2.2rem; height:2.2rem; }
+.icon-cards .icon-card p{ margin:0; color:var(--ink-deep); font-weight:700; line-height:1.55; font-size:1.44rem; }
+.icon-card.c1{ background:#fbe6b8; }
+.icon-card.c1 .icon-badge{ background:#dc9427; }
+.icon-card.c2{ background:#f9d9cc; }
+.icon-card.c2 .icon-badge{ background:#d9714a; }
+.icon-card.c3{ background:#e3dcf5; }
+.icon-card.c3 .icon-badge{ background:#7c5cc4; }
+.icon-card.c4{ background:#d7ede9; }
+.icon-card.c4 .icon-badge{ background:#3d8f83; }
+
 /* ---------- reinforce (solid light, single line) ---------- */
 .reinforce{ padding-block:4rem; text-align:center; background:var(--tone-light); }
 .reinforce p{ font-family:var(--font-display); font-weight:800; font-size:clamp(1.872rem, 4.608vw, 2.52rem); max-width:38ch; margin-inline:auto; line-height:1.4; color:var(--ink-deep); }
@@ -306,7 +329,7 @@ p{ margin:0; }
 .pricing-head{ text-align:center; max-width:38ch; margin:0 auto 1rem; }
 .cardshelf{ display:grid; gap:1.75rem; grid-template-columns:1fr; max-width:22rem; margin-inline:auto; }
 @media (min-width:56rem){ .cardshelf{ grid-template-columns:repeat(3,1fr); max-width:none; align-items:start; } }
-.cardshelf.two-up{ max-width:34rem; }
+.cardshelf.two-up{ max-width:49rem; }
 @media (min-width:40rem){ .cardshelf.two-up{ grid-template-columns:repeat(2,1fr); } }
 
 .libcard{
