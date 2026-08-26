@@ -9,6 +9,49 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/night-theme.css" />
+<style>
+  /* Page-scoped only: warm claymorphic/storybook treatment for the plain-text
+     narrative sections + quoteband on THIS page. Does not touch night-theme.css,
+     so every other campaign page is unaffected. */
+  :root{
+    --clay-peach-1:#fef0e0; --clay-peach-2:#fddbb8;
+    --clay-lavender-1:#f0e6fb; --clay-lavender-2:#e2cff5;
+    --clay-mint-1:#e2f7ec; --clay-mint-2:#c9edd9;
+    --clay-blush-1:#ffeef2; --clay-blush-2:#ffd9e4;
+    --clay-ink:#4a3540; --clay-ink-soft:#6e5560;
+    --clay-card:#fffaf2; --clay-accent:#a04a1a; --clay-accent-2:#6e46a0;
+  }
+
+  .narrative-1{ background:linear-gradient(160deg, var(--clay-peach-1) 0%, var(--clay-peach-2) 60%, var(--clay-lavender-1) 100%); }
+  .narrative-2{ background:linear-gradient(160deg, var(--clay-lavender-1) 0%, var(--clay-lavender-2) 60%, var(--clay-mint-1) 100%); }
+  .narrative-3{ background:linear-gradient(160deg, var(--clay-mint-1) 0%, var(--clay-mint-2) 60%, var(--clay-blush-1) 100%); }
+  .quoteband{ background:linear-gradient(160deg, var(--clay-blush-1) 0%, var(--clay-blush-2) 55%, var(--tone-mid) 100%); }
+
+  .narrative p, .quoteband p{ color:var(--clay-ink-soft); }
+  .narrative .quote-line, .quoteband p{ color:var(--clay-ink); }
+  .narrative-signature .brand-name{ color:var(--clay-accent); }
+  .narrative .accent{
+    color:var(--clay-accent); font-weight:800;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8' viewBox='0 0 20 8'%3E%3Cpath d='M0 4 Q5 0 10 4 T20 4' fill='none' stroke='%23a04a1a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-position:0 100%; background-size:18px 8px; padding-bottom:.3rem;
+  }
+
+  /* claymorphic / soft-neumorphic cards around each block of prose */
+  .clay-card{
+    position:relative; background:var(--clay-card); border-radius:2rem;
+    padding:2.75rem 2.25rem; max-width:44rem; margin:0 auto;
+    box-shadow:10px 10px 24px rgba(150,100,70,.18), -8px -8px 20px rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .clay-doodle{ position:absolute; top:-1rem; right:-.75rem; width:3rem; height:3rem; opacity:.9; }
+  .narrative-3 .btn-amber{
+    box-shadow:6px 6px 14px rgba(150,100,70,.3), -4px -4px 10px rgba(255,255,255,.7), 0 0 0 1px rgba(255,232,184,.3) inset;
+  }
+
+  .wavy-divider{ display:block; width:100%; height:1.75rem; margin:0; }
+  .wavy-divider path{ fill:none; stroke:var(--clay-accent-2); stroke-width:3; stroke-linecap:round; opacity:.55; }
+
+  @media (max-width:36rem){ .clay-card{ padding:2rem 1.35rem; } }
+</style>
 <!--
 THESIS: The verbatim PDF copy earns a real hero image because the copy itself describes exactly this moment — a mother, a child, and a story coming to life between them.
 OWN-WORLD: Same twilight tone-chain as bonding.html, but the hero pairs the night sky with a real illustrated scene instead of a papercut silhouette: image and heading swap sides by breakpoint (heading first on mobile, image on the left on desktop).
@@ -45,37 +88,55 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <section class="narrative narrative-1">
   <div class="wrap" data-reveal>
-    <p>The next time you pick them up, they'll feel heavier in your arms than you remember. It happens so gradually you don't notice. Until suddenly you do, and it hits you: <span class="accent">you need more of these moments, not fewer.</span></p>
-    <p>Right now, though, they still climb up beside you and say it:</p>
-    <p class="quote-line">&ldquo;Once upon a time&hellip;&rdquo;</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 L23 16 L33 17 L25 24 L27 34 L20 28 L13 34 L15 24 L7 17 L17 16 Z"/></svg>
+      <p>The next time you pick them up, they'll feel heavier in your arms than you remember. It happens so gradually you don't notice. Until suddenly you do, and it hits you: <span class="accent">you need more of these moments, not fewer.</span></p>
+      <p>Right now, though, they still climb up beside you and say it:</p>
+      <p class="quote-line">&ldquo;Once upon a time&hellip;&rdquo;</p>
+    </div>
   </div>
 </section>
+
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
 
 <section class="narrative narrative-2">
   <div class="wrap" data-reveal>
-    <p>They're still small enough, still yours enough, to want this.</p>
-    <p>One day they'll be older. They'll have their own interests, their own friends, their own whole world you're not standing in the middle of anymore. That's exactly how it should be.</p>
-    <p class="accent">But not yet.</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent-2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 32 C10 24 5 18 5 12 C5 7 9 4 13 4 C16 4 19 6 20 9 C21 6 24 4 27 4 C31 4 35 7 35 12 C35 18 30 24 20 32 Z"/></svg>
+      <p>They're still small enough, still yours enough, to want this.</p>
+      <p>One day they'll be older. They'll have their own interests, their own friends, their own whole world you're not standing in the middle of anymore. That's exactly how it should be.</p>
+      <p class="accent">But not yet.</p>
+    </div>
   </div>
 </section>
 
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
+
 <section class="narrative narrative-3">
   <div class="wrap" data-reveal>
-    <p>And one of the best ways to bond with your child is something you're probably already doing: telling them a story. You just need one that's actually theirs.</p>
-    <p>Little Storybook Maker helps you make the most of right now: a personalised story built around what they love, what they're learning, or a value you want to plant in them, ready to read together in just a few minutes.</p>
-    <div class="narrative-signature">
-      <p class="brand-name">Little Storybook Maker</p>
-      <p style="margin-top:.25rem;">Make reading time bonding time.</p>
-      <div class="hero-actions" style="justify-content:center;">
-        <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create today's story</a>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent)" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 C20 14 26 20 34 20 C26 20 20 26 20 34 C20 26 14 20 6 20 C14 20 20 14 20 6 Z"/></svg>
+      <p>And one of the best ways to bond with your child is something you're probably already doing: telling them a story. You just need one that's actually theirs.</p>
+      <p>Little Storybook Maker helps you make the most of right now: a personalised story built around what they love, what they're learning, or a value you want to plant in them, ready to read together in just a few minutes.</p>
+      <div class="narrative-signature">
+        <p class="brand-name">Little Storybook Maker</p>
+        <p style="margin-top:.25rem;">Make reading time bonding time.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="https://littlestorybookmaker.com/" class="btn btn-amber">Create today's story</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<svg class="wavy-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 50 5 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20"/></svg>
+
 <section class="quoteband">
   <div class="wrap" data-reveal>
-    <p>Because most nights, it was never really about the story. It's about the little person sitting beside you while you tell it.</p>
+    <div class="clay-card">
+      <svg class="clay-doodle" viewBox="0 0 40 40" fill="none" stroke="var(--clay-accent-2)" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M25 6 C15 8 9 16 11 25 C13 33 22 38 30 35 C21 34 14 27 14 18 C14 11 19 6 25 6 Z"/></svg>
+      <p>Because most nights, it was never really about the story. It's about the little person sitting beside you while you tell it.</p>
+    </div>
   </div>
 </section>
 
